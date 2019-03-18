@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.lastfighter.lostf">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/login_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Main_2"
+            android:label="SCUN失物找回系统 " />
+        <activity android:name=".Register" />
+        <activity android:name=".GetUserPasswords" />
+        <activity
+            android:name=".Pick_up"
+            android:label="提交拾取物品信息"
+            android:theme="@style/Action_Bar" />
+        <activity
+            android:name=".Lost_Found"
+            android:label="提交丢失物品信息"
+            android:theme="@style/Action_Bar" />
+        />
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.lastfighter.lostf.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".Setting" />
+        <activity android:name=".Detailed_information" />
+        <activity android:name=".Mine" />
+    </application>
+
+</manifest>
