@@ -61,7 +61,7 @@ public class Mine extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ItemInfo itemInfo_pickup = itemInfoList_pickup.get(position);
                 Intent intent1 = new Intent(Mine.this,Detailed_information.class);
-                intent1.putExtra("from","pickup");
+                intent1.putExtra("from","mine_pickup");
                 intent1.putExtra("pickid",itemInfo_pickup.getInfoid());
                 startActivity(intent1);
                 Toast.makeText(Mine.this,itemInfo_pickup.getInfoid(),Toast.LENGTH_SHORT).show();
@@ -75,7 +75,7 @@ public class Mine extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ItemInfo itemInfo_lost = itemInfoList_lost.get(position);
                 Intent intent1 = new Intent(Mine.this,Detailed_information.class);
-                intent1.putExtra("from","lost");
+                intent1.putExtra("from","mine_lost");
                 intent1.putExtra("lostfoundid",itemInfo_lost.getInfoid());
                 startActivity(intent1);
                 Toast.makeText(Mine.this,itemInfo_lost.getInfoid(),Toast.LENGTH_SHORT).show();

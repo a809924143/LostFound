@@ -48,6 +48,7 @@
         <activity android:name=".Setting" />
         <activity android:name=".Detailed_information" />
         <activity android:name=".Mine" />
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
